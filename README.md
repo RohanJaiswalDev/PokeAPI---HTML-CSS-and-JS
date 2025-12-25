@@ -30,7 +30,7 @@ A web application that demonstrates JavaScript API fetching using the PokeAPI (h
 * Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox
 
 ## 👨‍💻 Developer
-** 'RohanJaiswalDev`**
+'RohanJaiswalDev`
 
 ## 📄 License
 **This project is for educational purposes. Pokémon data is provided by PokeAPI.**
