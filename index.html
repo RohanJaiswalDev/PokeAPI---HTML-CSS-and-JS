@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Pokémon API JavaScript | Frontend</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 'Poppin' Google font link -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-bolt"></i> Pokémon API JavaScript</h1>
+        </header>
+
+        <div class="card">
+            <h2><i class="fas fa-search"></i> Pokémon Search</h2>
+
+            <div class="controls">
+                <div class="input-group">
+                    <label for="pokemonName"><i class="fas fa-dragon"></i> Pokémon Name or ID</label>
+                    <input type="text" id="pokemonName" placeholder="e.g. pikachu, 25, charizard" value="pikachu">
+                </div>
+
+                <div class="input-group">
+                    <label for="fetchType"><i class="fas fa-cog"></i> Action</label>
+                    <select id="fetchType">
+                        <option value="search">Search Pokémon</option>
+                        <option value="random">Get Random Pokémon</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="fetchButton">
+                <i class="fas fa-bolt"></i> Fetch Pokémon Data
+            </button>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading Pokémon data...</p>
+            </div>
+
+            <div class="error" id="error"></div>
+            <!-- Pokemon Display (Fetched) -->
+            <div class="pokemon-display">
+                <div class="pokemon-card" id="pokemonCard">
+                    <img id="pokemonImage" class="pokemon-image"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                        alt="Pokémon">
+                    <h2 id="pokemonNameDisplay" class="pokemon-name">Pikachu</h2>
+                    <div id="pokemonIdDisplay" class="pokemon-id">#025</div>
+                    <div id="pokemonTypes" class="pokemon-types">
+                        <span class="type" style="background-color: #F7D02C; color: #000;">Electric</span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-name">HP</div>
+                            <div class="stat-value" id="hp">35</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-name">Attack</div>
+                            <div class="stat-value" id="attack">55</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-name">Defense</div>
+                            <div class="stat-value" id="defense">40</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-name">Speed</div>
+                            <div class="stat-value" id="speed">90</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-name">Height</div>
+                            <div class="stat-value" id="height">0.4 m</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-name">Weight</div>
+                            <div class="stat-value" id="weight">6.0 kg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Learn JavaScript Fetch API | Data from <a href="https://pokeapi.co" target="_blank">PokeAPI</a>. Designed
+                by RohanJaiswalDev.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
